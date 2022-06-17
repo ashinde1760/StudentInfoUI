@@ -1,0 +1,60 @@
+<p-toolbar>
+  <div>
+    <button
+      pButton
+      type="button"
+      label="Add Student"
+      (click)="onRegisterClick()"
+    ></button>
+  </div>
+  <div>
+    <button pButton label="View Student" (click)="onClickViewStudent()"></button>
+  </div>
+</p-toolbar>
+
+<p-card *ngIf="addStudent" styleClass="card">
+  <ng-template pTemplate="title">
+    <h2>Add student here</h2>
+  </ng-template>
+  <hr />
+  <ng-template pTemplate="content">
+    <div>
+      <input pInputText [(ngModel)]="stdentData.id" placeholder="Enter Id" />
+    </div>
+    <div>
+      <input
+        class="inputbox"
+        pInputText
+        [(ngModel)]="stdentData.name"
+        placeholder="Enter Name"
+      />
+    </div>
+    <div>
+      <input
+        class="inputbox"
+        pInputText
+        [(ngModel)]="stdentData.address"
+        placeholder="Enter Address"
+      />
+    </div>
+    <div>
+      <input
+        class="inputbox"
+        pInputText
+        [(ngModel)]="stdentData.email"
+        placeholder="Enter Email"
+      />
+    </div>
+    <div>
+      <input
+        pInputText
+        class="inputbox"
+        [(ngModel)]="stdentData.phoneNumber"
+        placeholder="Enter Phone Number"
+      />
+    </div>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <button pButton label="Submit" (click)="OnClickSubmit()"></button>
+  </ng-template>
+</p-card>

@@ -1,0 +1,9 @@
+::ng-deep .card{
+    width:50% ;
+    margin: 10px 25%;
+}
+
+::ng-deep .inputbox{
+    width:fit-content;
+    margin: 10px ;
+}
